@@ -11,7 +11,7 @@ namespace ATM
         {
             var ac = new List<js>();
 
-            using (StreamReader sr = new StreamReader("accounts.json"))
+            using (StreamReader sr = new StreamReader("../../../accounts.json"))
             {
                 string json = sr.ReadToEnd();
                 ac = JsonSerializer.Deserialize<List<js>>(json);
@@ -187,10 +187,10 @@ namespace ATM
         
         private void Exit()
         {
-/*            foreach(var account in accounts)
+           foreach(var account in accounts)
             {
                 Console.WriteLine(account.GetUserName());
-            }*/
+            }
         }
 
         private bool IsEmailRepeat(string email)
